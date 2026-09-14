@@ -1704,75 +1704,54 @@ footer a {
 @media
 (max-width: 600px) {
 
-
     .brand-text {
+        display: flex;
+    }
 
+    .brand-text strong {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .brand-text span {
         display: none;
     }
 
-
     .hero h1 {
-
         font-size: 52px;
     }
 
-
     .stats {
-
         flex-wrap: wrap;
-
         gap: 20px;
     }
 
-
     .project-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
-
 
     .skills-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
-
 
     .about-skills {
-
-        grid-template-columns:
-            1fr
-            1fr;
+        grid-template-columns: 1fr 1fr;
     }
-
 
     .gallery {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
-
 
     .challenge-solution {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
-
     .modal-cover {
-
         height: 250px;
     }
 
-
     footer {
-
         flex-direction: column;
-
         gap: 10px;
     }
-
-
 }
