@@ -1684,29 +1684,22 @@ footer a {
 
     /* Hamburger */
     .menu-btn {
-        display: flex !important;
+        display: block !important;
 
-        align-items: center;
-        justify-content: center;
+        width: 45px;
+        height: 45px;
 
-        width: 48px;
-        height: 48px;
-
-        margin-left: auto;
+        padding: 0;
 
         flex-shrink: 0;
 
-        background: transparent;
-
-        border: none;
+        font-size: 34px;
+        line-height: 1;
 
         color: var(--text);
 
-        font-size: 34px;
-
-        line-height: 1;
-
-        cursor: pointer;
+        background: transparent;
+        border: none;
     }
 
 
@@ -2081,4 +2074,3 @@ footer a {
     }
 
 }
-
