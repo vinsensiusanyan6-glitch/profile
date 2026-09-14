@@ -1588,388 +1588,69 @@ footer a {
    RESPONSIVE
 ======================================== */
 
-@media
-(max-width: 1100px) {
-
-
-    .project-grid {
-
-        grid-template-columns:
-            repeat(
-                2,
-                1fr
-            );
-    }
-
-
-    .skills-grid {
-
-        grid-template-columns:
-            repeat(
-                2,
-                1fr
-            );
-    }
-
-
-    .about-skills {
-
-        grid-template-columns:
-            repeat(
-                2,
-                1fr
-            );
-    }
-
-}
-
-
-/* ========================================
-   MOBILE RESPONSIVE
-======================================== */
-
 @media (max-width: 600px) {
 
-    /* GLOBAL */
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden !important;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-
-    /* ========================================
-       NAVBAR
-    ======================================== */
-
-    .navbar {
-        width: 100%;
-        height: 70px;
-        padding: 0 15px;
-        overflow: hidden;
-    }
-
     .brand {
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        min-width: 0;
-        max-width: calc(100% - 55px);
-    }
-
-    .profile-image {
-        width: 42px;
-        height: 42px;
-        flex-shrink: 0;
+        display: flex !important;
+        align-items: center !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .brand-text {
         display: flex !important;
-        flex-direction: column;
-        min-width: 0;
-        overflow: hidden;
+        flex-direction: column !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .brand-text strong {
-        display: block;
-        font-size: 14px;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-size: 14px !important;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
     .brand-text span {
-        display: none;
-    }
-
-    /* Sembunyikan menu desktop */
-    nav {
         display: none !important;
-    }
-
-    /* Tampilkan hamburger */
-    .menu-btn {
-        display: block !important;
-        flex-shrink: 0;
-        font-size: 28px;
-    }
-
-
-    /* ========================================
-       HERO
-    ======================================== */
-
-    .hero {
-        width: 100%;
-        max-width: 100%;
-        min-height: auto;
-
-        display: grid;
-
-        /* PENTING: 1 kolom di HP */
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
-        padding: 60px 24px;
-        
-        overflow: hidden;
     }
 
     .hero h1 {
         font-size: 52px;
-        line-height: 1.05;
-        letter-spacing: -2px;
     }
-
-    .hero-text {
-        width: 100%;
-        max-width: 100%;
-        font-size: 16px;
-    }
-
-
-    /* ========================================
-       HERO BUTTON
-    ======================================== */
-
-    .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .btn {
-        max-width: 100%;
-    }
-
-
-    /* ========================================
-       TERMINAL
-    ======================================== */
-
-    .hero-terminal {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    .terminal {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        padding: 18px;
-
-        overflow: hidden;
-        word-break: break-word;
-    }
-
-    .terminal p {
-        max-width: 100%;
-        overflow-wrap: anywhere;
-    }
-
-
-    /* ========================================
-       STATS
-    ======================================== */
 
     .stats {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        width: 100%;
-    }
-
-    .stats div {
-        min-width: 0;
-    }
-
-
-    /* ========================================
-       SECTION
-    ======================================== */
-
-    .section {
-        width: 100%;
-        max-width: 100%;
-        padding: 70px 24px;
-        overflow: hidden;
-    }
-
-
-    /* ========================================
-       SECTION HEAD
-    ======================================== */
-
-    .section-head {
-        display: block;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .filters {
-        display: flex;
         flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 20px;
+        gap: 20px;
     }
 
-    .filter {
-        flex-shrink: 0;
-    }
-
-
-    /* ========================================
-       ABOUT
-    ======================================== */
-
-    .about-section {
+    .project-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 
     .about-skills {
         grid-template-columns: 1fr 1fr;
     }
 
-
-    /* ========================================
-       SKILLS
-    ======================================== */
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-
-    .skill-card {
-        width: 100%;
-        min-width: 0;
-    }
-
-
-    /* ========================================
-       PROJECT
-    ======================================== */
-
-    .project-grid {
-        display: grid !important;
-
-        grid-template-columns: 1fr !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        gap: 24px !important;
-    }
-
-    .project-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-
-        overflow: hidden;
-    }
-
-    .project-cover {
-        width: 100%;
-        max-width: 100%;
-        height: 220px;
-        object-fit: cover;
-    }
-
-    .project-info {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .project-card h3,
-    .project-card p {
-        max-width: 100%;
-        overflow-wrap: anywhere;
-    }
-
-
-    /* ========================================
-       TIMELINE
-    ======================================== */
-
-    .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-
-
-    /* ========================================
-       GALLERY
-    ======================================== */
-
     .gallery {
         grid-template-columns: 1fr;
-        width: 100%;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: auto;
-    }
-
-
-    /* ========================================
-       CONTACT
-    ======================================== */
-
-    .contact-box {
-        flex-direction: column;
-        padding: 30px 20px;
-        gap: 30px;
-    }
-
-
-    /* ========================================
-       MODAL
-    ======================================== */
-
-    .project-modal {
-        padding: 20px 10px;
-    }
-
-    .modal-cover {
-        height: 250px;
-    }
-
-    .case-header {
-        padding: 35px 25px;
-    }
-
-    .case-section {
-        padding: 25px;
-    }
-
-    .overview {
-        grid-template-columns: 1fr;
-        gap: 30px;
     }
 
     .challenge-solution {
         grid-template-columns: 1fr;
     }
 
-
-    /* ========================================
-       FOOTER
-    ======================================== */
+    .modal-cover {
+        height: 250px;
+    }
 
     footer {
         flex-direction: column;
         gap: 10px;
-        padding: 30px 24px;
     }
-
 }
