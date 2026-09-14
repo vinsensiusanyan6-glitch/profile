@@ -827,16 +827,10 @@ nav a:hover {
 ======================================== */
 
 .project-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            3,
-            1fr
-        );
-
-    gap: 20px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    width: 100%;
 }
 
 
@@ -1703,38 +1697,23 @@ footer a {
 
 @media (max-width: 600px) {
 
-    .navbar {
-        padding: 0 15px;
+    .project-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
     }
 
-    .brand {
-        display: flex !important;
-        align-items: center;
-        gap: 8px;
-        min-width: 0;
+    .project-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
     }
 
-    .profile-image {
-        width: 40px;
-        height: 40px;
-        flex-shrink: 0;
-    }
-
-    .brand-text {
-        display: flex !important;
-        flex-direction: column;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-
-    .brand-text strong {
-        display: block !important;
-        font-size: 13px;
-        white-space: nowrap;
-    }
-
-    .brand-text span {
-        display: none !important;
+    .project-card img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
 }
