@@ -2105,3 +2105,48 @@ footer a {
     }
 
 }
+
+/* ========================================
+   MOBILE TERMINAL FIX
+======================================== */
+
+@media (max-width: 600px) {
+
+    .hero-terminal {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .terminal {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 12px;
+
+        font-size: 9px;
+        line-height: 1.5;
+
+        overflow: hidden;
+    }
+
+    .terminal p {
+        white-space: normal;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .terminal b {
+        white-space: normal;
+        word-break: normal;
+    }
+
+    .terminal-top {
+        padding-bottom: 9px;
+        margin-bottom: 10px;
+    }
+
+    .terminal-top span {
+        width: 8px;
+        height: 8px;
+    }
+}
