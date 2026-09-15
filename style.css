@@ -1586,115 +1586,92 @@ footer a {
 
 
 /* ========================================
-   MOBILE - FINAL
+   MOBILE RESPONSIVE
 ======================================== */
 
 @media (max-width: 600px) {
 
-    html {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
+    /* =========================
+       GLOBAL
+    ========================= */
 
-        /* Disable zoom */
-        touch-action: pan-y;
-    }
-
+    html,
     body {
         width: 100%;
         max-width: 100%;
-        min-width: 0;
-
-        overflow-x: hidden;
-        overflow-y: auto;
-
-        /* Disable horizontal gesture */
-        touch-action: pan-y;
+        overflow-x: hidden !important;
     }
 
-    /* Semua elemen tidak boleh menyebabkan
-       halaman melebar */
-    *,
-    *::before,
-    *::after {
-        max-width: 100%;
+    * {
         box-sizing: border-box;
     }
 
 
-    /* ========================================
+    /* =========================
        NAVBAR
-    ======================================== */
+    ========================= */
 
     .navbar {
         width: 100%;
-        height: 72px;
-
-        padding: 0 36px;
-
+        height: 70px;
+        padding: 0 18px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         overflow: hidden;
     }
 
     .brand {
         display: flex;
         align-items: center;
-
-        gap: 12px;
-
+        gap: 10px;
         min-width: 0;
-        flex: 1;
+        max-width: calc(100% - 60px);
     }
 
     .profile-image {
-        width: 50px;
-        height: 50px;
-
+        width: 42px;
+        height: 42px;
         flex-shrink: 0;
     }
 
     .brand-text {
         display: flex !important;
-
+        flex-direction: column;
         min-width: 0;
-        overflow: hidden;
     }
 
     .brand-text strong {
-        font-size: 16px;
-
+        font-size: 14px;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .brand-text span {
         display: block;
-
-        font-size: 13px;
+        font-size: 11px;
     }
 
 
-    /* Desktop menu hilang */
+    /* Menu desktop disembunyikan */
     nav {
         display: none !important;
     }
 
 
-    /* Hamburger */
+    /* Hamburger ditampilkan */
     .menu-btn {
         display: block !important;
 
-        width: 45px;
-        height: 45px;
+        width: 42px;
+        height: 42px;
 
         padding: 0;
 
         flex-shrink: 0;
 
-        font-size: 34px;
+        font-size: 30px;
         line-height: 1;
 
         color: var(--text);
@@ -1704,9 +1681,9 @@ footer a {
     }
 
 
-    /* ========================================
+    /* =========================
        HERO
-    ======================================== */
+    ========================= */
 
     .hero {
         width: 100%;
@@ -1716,257 +1693,240 @@ footer a {
 
         display: grid;
 
-        grid-template-columns:
-            minmax(0, 1.05fr)
-            minmax(0, 0.75fr);
+        /*
+         * Tetap 2 kolom,
+         * tetapi dibuat kecil supaya
+         * terminal tidak keluar layar.
+         */
+        grid-template-columns: 1.15fr 0.85fr;
 
         gap: 20px;
 
-        padding:
-            70px
-            36px
-            55px;
+        padding: 55px 22px 60px;
 
         overflow: hidden;
     }
 
 
-    /* ========================================
+    /* =========================
        HERO TEXT
-    ======================================== */
+    ========================= */
 
     .eyebrow {
-        font-size: 10px;
-
+        font-size: 9px;
         letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
 
-        line-height: 1.8;
-
-        margin-bottom: 22px;
+    .eyebrow span {
+        margin: 0 3px;
     }
 
     .hero h1 {
-        font-size: 42px;
-
-        line-height: 1.04;
-
+        font-size: 38px;
+        line-height: 1.05;
         letter-spacing: -2px;
-
-        margin-bottom: 25px;
-
-        overflow-wrap: normal;
+        margin-bottom: 20px;
     }
 
     .hero-text {
         width: 100%;
         max-width: 100%;
 
-        font-size: 15px;
+        font-size: 12px;
+        line-height: 1.8;
 
-        line-height: 1.7;
-
-        margin-bottom: 28px;
+        margin-bottom: 22px;
     }
 
 
-    /* ========================================
-       BUTTON
-    ======================================== */
+    /* =========================
+       HERO BUTTON
+    ========================= */
 
     .hero-actions {
         display: flex;
-
-        gap: 12px;
-
-        margin-bottom: 40px;
+        gap: 8px;
+        margin-bottom: 25px;
     }
 
     .btn {
-        padding:
-            13px
-            20px;
-
-        font-size: 14px;
-
-        white-space: normal;
+        padding: 10px 14px;
+        font-size: 11px;
     }
 
 
-    /* ========================================
+    /* =========================
        TERMINAL
-    ======================================== */
+    ========================= */
 
     .hero-terminal {
         width: 100%;
         min-width: 0;
 
         display: flex;
-
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
-
-        padding-top: 5px;
     }
 
     .terminal {
         width: 100%;
         max-width: 100%;
-        min-width: 0;
 
-        padding: 20px 14px;
+        padding: 14px;
 
-        border-radius: 12px;
+        border-radius: 10px;
 
         font-size: 10px;
 
-        line-height: 1.7;
-
         overflow: hidden;
+
+        word-break: break-word;
     }
 
     .terminal-top {
-        gap: 7px;
+        gap: 5px;
 
-        padding-bottom: 12px;
-        margin-bottom: 18px;
+        padding-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     .terminal-top span {
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
     }
 
     .terminal p {
-        margin: 9px 0;
-
-        white-space: normal;
-
-        overflow-wrap: normal;
-
-        word-break: normal;
-    }
-
-    .terminal b {
-        white-space: normal;
-
-        word-break: normal;
+        margin: 7px 0;
+        overflow-wrap: anywhere;
     }
 
 
-    /* ========================================
+    /* =========================
        STATS
-    ======================================== */
+    ========================= */
 
     .stats {
         display: grid;
 
         grid-template-columns: 1fr 1fr;
 
-        gap: 20px;
+        gap: 15px;
 
         width: 100%;
     }
 
     .stats div {
         min-width: 0;
-
-        padding-left: 16px;
+        padding-left: 12px;
     }
 
     .stats strong {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .stats span {
-        font-size: 12px;
+        font-size: 9px;
     }
 
 
-    /* ========================================
+    /* =========================
        SECTION
-    ======================================== */
+    ========================= */
 
     .section {
         width: 100%;
         max-width: 100%;
 
-        padding:
-            80px
-            36px;
+        padding: 70px 22px;
 
         overflow: hidden;
     }
 
 
-    /* ========================================
-       ABOUT
-    ======================================== */
-
-    .about-section {
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .about-skills {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 12px;
-    }
-
-
-    /* ========================================
-       SKILLS
-    ======================================== */
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-    .skill-card {
-        width: 100%;
-        min-width: 0;
-    }
-
-
-    /* ========================================
-       PROJECT
-    ======================================== */
+    /* =========================
+       SECTION HEAD
+    ========================= */
 
     .section-head {
         display: block;
+        margin-bottom: 30px;
     }
 
     .filters {
         display: flex;
-
         flex-wrap: wrap;
-
-        gap: 10px;
-
+        gap: 8px;
         margin-top: 20px;
     }
+
+    .filter {
+        font-size: 11px;
+        padding: 7px 13px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-skills {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .about-skill {
+        padding: 15px;
+        min-width: 0;
+    }
+
+    .about-skill h3 {
+        font-size: 14px;
+    }
+
+    .about-skill p {
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .skill-card {
+        padding: 22px;
+        width: 100%;
+    }
+
+
+    /* =========================
+       PROJECT
+    ========================= */
 
     .project-grid {
         display: grid !important;
 
         grid-template-columns: 1fr !important;
 
-        gap: 24px !important;
-
         width: 100% !important;
         max-width: 100% !important;
+
+        gap: 20px !important;
     }
 
     .project-card {
         width: 100% !important;
-
         max-width: 100% !important;
-
         min-width: 0 !important;
 
         overflow: hidden;
@@ -1974,570 +1934,89 @@ footer a {
 
     .project-cover {
         width: 100% !important;
-
         max-width: 100% !important;
 
-        height: 220px;
+        height: 200px;
 
         object-fit: cover;
     }
 
-
-    /* ========================================
-       GALLERY
-    ======================================== */
-
-    .gallery {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-    }
-
-    .gallery img {
+    .project-info {
         width: 100%;
-
-        height: auto;
+        padding: 20px;
     }
 
-
-    /* ========================================
-       TIMELINE
-    ======================================== */
-
-    .timeline-item {
-        grid-template-columns: 1fr;
-
-        gap: 8px;
+    .project-card h3 {
+        font-size: 20px;
     }
 
-
-    /* ========================================
-       CONTACT
-    ======================================== */
-
-    .contact-box {
-        flex-direction: column;
-
-        gap: 30px;
-
-        padding: 30px 25px;
-    }
-
-
-    /* ========================================
-       MODAL
-    ======================================== */
-
-    .project-modal {
-        padding: 15px 10px;
-
-        overflow-x: hidden;
-    }
-
-    .modal-wrapper {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .modal-cover {
-        height: 230px;
-    }
-
-    .case-header {
-        padding: 35px 25px;
-    }
-
-    .case-section {
-        padding: 25px;
-    }
-
-    .overview {
-        grid-template-columns: 1fr;
-    }
-
-    .challenge-solution {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* ========================================
-       FOOTER
-    ======================================== */
-
-    footer {
-        width: 100%;
-
-        flex-direction: column;
-
-        gap: 10px;
-
-        padding: 30px 36px;
-    }
-
-}@media (max-width: 600px) {
-
-    html {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
-
-        /* Disable zoom */
-        touch-action: pan-y;
-    }
-
-    body {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
-        overflow-x: hidden;
-        overflow-y: auto;
-
-        /* Disable horizontal gesture */
-        touch-action: pan-y;
-    }
-
-    /* Semua elemen tidak boleh menyebabkan
-       halaman melebar */
-    *,
-    *::before,
-    *::after {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-
-    /* ========================================
-       NAVBAR
-    ======================================== */
-
-    .navbar {
-        width: 100%;
-        height: 72px;
-
-        padding: 0 36px;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        overflow: hidden;
-    }
-
-    .brand {
-        display: flex;
-        align-items: center;
-
-        gap: 12px;
-
-        min-width: 0;
-        flex: 1;
-    }
-
-    .profile-image {
-        width: 50px;
-        height: 50px;
-
-        flex-shrink: 0;
-    }
-
-    .brand-text {
-        display: flex !important;
-
-        min-width: 0;
-        overflow: hidden;
-    }
-
-    .brand-text strong {
-        font-size: 16px;
-
-        white-space: nowrap;
-    }
-
-    .brand-text span {
-        display: block;
-
+    .project-card p {
         font-size: 13px;
-    }
-
-
-    /* Desktop menu hilang */
-    nav {
-        display: none !important;
-    }
-
-
-    /* Hamburger */
-    .menu-btn {
-        display: block !important;
-
-        width: 45px;
-        height: 45px;
-
-        padding: 0;
-
-        flex-shrink: 0;
-
-        font-size: 34px;
-        line-height: 1;
-
-        color: var(--text);
-
-        background: transparent;
-        border: none;
-    }
-
-
-    /* ========================================
-       HERO
-    ======================================== */
-
-    .hero {
-        width: 100%;
-        max-width: 100%;
-
-        min-height: auto;
-
-        display: grid;
-
-        grid-template-columns:
-            minmax(0, 1.05fr)
-            minmax(0, 0.75fr);
-
-        gap: 20px;
-
-        padding:
-            70px
-            36px
-            55px;
-
-        overflow: hidden;
-    }
-
-
-    /* ========================================
-       HERO TEXT
-    ======================================== */
-
-    .eyebrow {
-        font-size: 10px;
-
-        letter-spacing: 2px;
-
         line-height: 1.8;
 
-        margin-bottom: 22px;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-
-        line-height: 1.04;
-
-        letter-spacing: -2px;
-
-        margin-bottom: 25px;
-
-        overflow-wrap: normal;
-    }
-
-    .hero-text {
-        width: 100%;
-        max-width: 100%;
-
-        font-size: 15px;
-
-        line-height: 1.7;
-
-        margin-bottom: 28px;
+        overflow-wrap: anywhere;
     }
 
 
-    /* ========================================
-       BUTTON
-    ======================================== */
+    /* =========================
+       TIMELINE
+    ========================= */
 
-    .hero-actions {
-        display: flex;
-
-        gap: 12px;
-
-        margin-bottom: 40px;
-    }
-
-    .btn {
-        padding:
-            13px
-            20px;
-
-        font-size: 14px;
-
-        white-space: normal;
-    }
-
-
-    /* ========================================
-       TERMINAL
-    ======================================== */
-
-    .hero-terminal {
-        width: 100%;
-        min-width: 0;
-
-        display: flex;
-
-        align-items: flex-start;
-        justify-content: center;
-
-        padding-top: 5px;
-    }
-
-    .terminal {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-
-        padding: 20px 14px;
-
-        border-radius: 12px;
-
-        font-size: 10px;
-
-        line-height: 1.7;
-
-        overflow: hidden;
-    }
-
-    .terminal-top {
-        gap: 7px;
-
-        padding-bottom: 12px;
-        margin-bottom: 18px;
-    }
-
-    .terminal-top span {
-        width: 10px;
-        height: 10px;
-    }
-
-    .terminal p {
-        margin: 9px 0;
-
-        white-space: normal;
-
-        overflow-wrap: normal;
-
-        word-break: normal;
-    }
-
-    .terminal b {
-        white-space: normal;
-
-        word-break: normal;
-    }
-
-
-    /* ========================================
-       STATS
-    ======================================== */
-
-    .stats {
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 20px;
-
-        width: 100%;
-    }
-
-    .stats div {
-        min-width: 0;
-
-        padding-left: 16px;
-    }
-
-    .stats strong {
-        font-size: 25px;
-    }
-
-    .stats span {
-        font-size: 12px;
-    }
-
-
-    /* ========================================
-       SECTION
-    ======================================== */
-
-    .section {
-        width: 100%;
-        max-width: 100%;
-
-        padding:
-            80px
-            36px;
-
-        overflow: hidden;
-    }
-
-
-    /* ========================================
-       ABOUT
-    ======================================== */
-
-    .about-section {
-        display: grid;
-
+    .timeline-item {
         grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .about-skills {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 12px;
+        gap: 8px;
     }
 
 
-    /* ========================================
-       SKILLS
-    ======================================== */
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-    .skill-card {
-        width: 100%;
-        min-width: 0;
-    }
-
-
-    /* ========================================
-       PROJECT
-    ======================================== */
-
-    .section-head {
-        display: block;
-    }
-
-    .filters {
-        display: flex;
-
-        flex-wrap: wrap;
-
-        gap: 10px;
-
-        margin-top: 20px;
-    }
-
-    .project-grid {
-        display: grid !important;
-
-        grid-template-columns: 1fr !important;
-
-        gap: 24px !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .project-card {
-        width: 100% !important;
-
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-
-        overflow: hidden;
-    }
-
-    .project-cover {
-        width: 100% !important;
-
-        max-width: 100% !important;
-
-        height: 220px;
-
-        object-fit: cover;
-    }
-
-
-    /* ========================================
+    /* =========================
        GALLERY
-    ======================================== */
+    ========================= */
 
     .gallery {
         grid-template-columns: 1fr;
-
         gap: 15px;
     }
 
     .gallery img {
         width: 100%;
-
         height: auto;
     }
 
 
-    /* ========================================
-       TIMELINE
-    ======================================== */
-
-    .timeline-item {
-        grid-template-columns: 1fr;
-
-        gap: 8px;
-    }
-
-
-    /* ========================================
+    /* =========================
        CONTACT
-    ======================================== */
+    ========================= */
 
     .contact-box {
         flex-direction: column;
-
-        gap: 30px;
-
-        padding: 30px 25px;
+        gap: 25px;
+        padding: 30px 20px;
     }
 
 
-    /* ========================================
+    /* =========================
        MODAL
-    ======================================== */
+    ========================= */
 
     .project-modal {
-        padding: 15px 10px;
-
-        overflow-x: hidden;
-    }
-
-    .modal-wrapper {
-        width: 100%;
-        max-width: 100%;
+        padding: 15px 8px;
     }
 
     .modal-cover {
-        height: 230px;
+        height: 220px;
     }
 
     .case-header {
-        padding: 35px 25px;
+        padding: 30px 20px;
     }
 
     .case-section {
-        padding: 25px;
+        padding: 25px 20px;
     }
 
     .overview {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
 
     .challenge-solution {
@@ -2545,18 +2024,14 @@ footer a {
     }
 
 
-    /* ========================================
+    /* =========================
        FOOTER
-    ======================================== */
+    ========================= */
 
     footer {
-        width: 100%;
-
         flex-direction: column;
-
         gap: 10px;
-
-        padding: 30px 36px;
+        padding: 30px 22px;
     }
 
 }
