@@ -2206,12 +2206,468 @@ footer a {
 }
 
 
+
 /* ========================================
-   VERY SMALL PHONE
-   480px ke bawah
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+        margin: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+        width: 100%;
+        height: 72px;
+        padding: 0 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        overflow: hidden;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        min-width: 0;
+        max-width: calc(100% - 60px);
+    }
+
+    .profile-image {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+    }
+
+    .brand-text {
+        display: flex !important;
+        flex-direction: column;
+
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .brand-text strong {
+        font-size: 15px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .brand-text span {
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       MENU
+    ========================= */
+
+    nav {
+        display: none !important;
+    }
+
+    .menu-btn {
+        display: block !important;
+
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+
+        background: transparent;
+        border: none;
+
+        color: var(--text);
+
+        font-size: 32px;
+        line-height: 1;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: auto;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1.15fr)
+            minmax(0, 0.85fr);
+
+        gap: 24px;
+
+        padding: 55px 22px 65px;
+
+        overflow: hidden;
+    }
+
+    .hero > * {
+        min-width: 0;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+        line-height: 1.8;
+
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        line-height: 1.02;
+        letter-spacing: -2px;
+
+        margin-bottom: 20px;
+
+        overflow-wrap: break-word;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 14px;
+        line-height: 1.8;
+
+        margin-bottom: 22px;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        margin-bottom: 28px;
+    }
+
+    .btn {
+        padding: 11px 16px;
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       TERMINAL
+    ========================= */
+
+    .hero-terminal {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .terminal {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        padding: 16px;
+
+        font-size: 11px;
+
+        overflow: hidden;
+        word-break: break-word;
+    }
+
+    .terminal p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+
+        width: 100%;
+    }
+
+    .stats div {
+        min-width: 0;
+        padding-left: 12px;
+    }
+
+    .stats strong {
+        font-size: 21px;
+    }
+
+    .stats span {
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       SECTION
+    ========================= */
+
+    .section {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 70px 22px;
+
+        overflow: hidden;
+    }
+
+    .section-head {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       FILTER
+    ========================= */
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        width: 100%;
+
+        margin-top: 20px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-skills {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+
+        width: 100%;
+    }
+
+    .skill-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =========================
+       PROJECT
+    ========================= */
+
+    .project-grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 22px !important;
+    }
+
+    .project-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden;
+    }
+
+    .project-cover {
+        width: 100%;
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+    .project-info {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 20px;
+        line-height: 1.4;
+
+        overflow-wrap: anywhere;
+    }
+
+    .project-card p {
+        font-size: 14px;
+        line-height: 1.8;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =========================
+       TIMELINE
+    ========================= */
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-box {
+        flex-direction: column;
+
+        gap: 25px;
+
+        padding: 30px 20px;
+    }
+
+
+    /* =========================
+       MODAL
+    ========================= */
+
+    .project-modal {
+        padding: 15px 10px;
+    }
+
+    .modal-cover {
+        height: 240px;
+    }
+
+    .case-header {
+        padding: 35px 22px;
+    }
+
+    .case-section {
+        padding: 25px 22px;
+    }
+
+    .overview {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-solution {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 30px 22px;
+    }
+
+}
+
+
+/* ========================================
+   HP KECIL
 ======================================== */
 
 @media (max-width: 480px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .terminal {
+        width: 100%;
+        font-size: 12px;
+    }
+
+}@media (max-width: 480px) {
 
     .navbar {
         height: 68px;
