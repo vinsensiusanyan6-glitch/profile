@@ -1584,108 +1584,149 @@ footer a {
 }
 
 
-
 /* ========================================
    MOBILE RESPONSIVE
 ======================================== */
 
 @media (max-width: 600px) {
 
-    /* =========================
+    /* ====================================
        GLOBAL
-    ========================= */
+    ==================================== */
 
-    html,
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+        -webkit-text-size-adjust: 100%;
+    }
+
     body {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden !important;
+        margin: 0;
     }
 
-    * {
+    *,
+    *::before,
+    *::after {
         box-sizing: border-box;
     }
 
 
-    /* =========================
+    /* ====================================
        NAVBAR
-    ========================= */
+    ==================================== */
 
     .navbar {
         width: 100%;
-        height: 70px;
+        height: 72px;
+
         padding: 0 18px;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         overflow: hidden;
     }
+
 
     .brand {
         display: flex;
         align-items: center;
+
         gap: 10px;
+
         min-width: 0;
         max-width: calc(100% - 60px);
+
+        flex-shrink: 1;
     }
 
+
     .profile-image {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
+
         flex-shrink: 0;
     }
+
 
     .brand-text {
         display: flex !important;
         flex-direction: column;
+
         min-width: 0;
+
+        line-height: 1.25;
+
+        overflow: hidden;
     }
 
+
     .brand-text strong {
-        font-size: 14px;
+        display: block;
+
+        font-size: 15px;
+
         white-space: nowrap;
+
         overflow: hidden;
+
         text-overflow: ellipsis;
     }
 
+
     .brand-text span {
         display: block;
+
         font-size: 11px;
+
+        white-space: nowrap;
     }
 
 
-    /* Menu desktop disembunyikan */
+    /* ====================================
+       HAMBURGER
+    ==================================== */
+
     nav {
         display: none !important;
     }
 
 
-    /* Hamburger ditampilkan */
     .menu-btn {
         display: block !important;
 
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
 
         padding: 0;
 
-        flex-shrink: 0;
+        background: transparent;
 
-        font-size: 30px;
-        line-height: 1;
+        border: none;
 
         color: var(--text);
 
-        background: transparent;
-        border: none;
+        font-size: 32px;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        flex-shrink: 0;
     }
 
 
-    /* =========================
+    /* ====================================
        HERO
-    ========================= */
+    ==================================== */
 
     .hero {
+
         width: 100%;
         max-width: 100%;
 
@@ -1694,119 +1735,173 @@ footer a {
         display: grid;
 
         /*
-         * Tetap 2 kolom,
-         * tetapi dibuat kecil supaya
-         * terminal tidak keluar layar.
-         */
-        grid-template-columns: 1.15fr 0.85fr;
+           Tetap 2 kolom seperti desain
+           referensi pada HP yang cukup lebar
+        */
+        grid-template-columns: minmax(0, 1.15fr)
+                               minmax(0, 0.85fr);
 
-        gap: 20px;
+        align-items: center;
 
-        padding: 55px 22px 60px;
+        gap: 24px;
+
+        padding: 55px 22px 65px;
 
         overflow: hidden;
     }
 
 
-    /* =========================
+    .hero > * {
+        min-width: 0;
+    }
+
+
+    /* ====================================
        HERO TEXT
-    ========================= */
+    ==================================== */
 
     .eyebrow {
+
         font-size: 9px;
+
         letter-spacing: 2px;
+
+        line-height: 1.8;
+
         margin-bottom: 15px;
     }
 
-    .eyebrow span {
-        margin: 0 3px;
-    }
 
     .hero h1 {
-        font-size: 38px;
-        line-height: 1.05;
-        letter-spacing: -2px;
-        margin-bottom: 20px;
-    }
 
-    .hero-text {
-        width: 100%;
+        font-size: 43px;
+
+        line-height: 1.02;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 20px;
+
         max-width: 100%;
 
-        font-size: 12px;
+        overflow-wrap: break-word;
+    }
+
+
+    .hero-text {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        font-size: 14px;
+
         line-height: 1.8;
 
         margin-bottom: 22px;
+
+        overflow-wrap: break-word;
     }
 
 
-    /* =========================
+    /* ====================================
        HERO BUTTON
-    ========================= */
+    ==================================== */
 
     .hero-actions {
+
         display: flex;
-        gap: 8px;
-        margin-bottom: 25px;
+
+        gap: 10px;
+
+        margin-bottom: 28px;
     }
+
 
     .btn {
-        padding: 10px 14px;
-        font-size: 11px;
+
+        padding: 11px 16px;
+
+        font-size: 12px;
+
+        white-space: normal;
     }
 
 
-    /* =========================
+    /* ====================================
        TERMINAL
-    ========================= */
+    ==================================== */
 
     .hero-terminal {
+
         width: 100%;
+
+        max-width: 100%;
+
         min-width: 0;
 
         display: flex;
-        align-items: center;
+
         justify-content: center;
     }
 
+
     .terminal {
+
         width: 100%;
+
         max-width: 100%;
 
-        padding: 14px;
+        min-width: 0;
 
-        border-radius: 10px;
+        padding: 16px;
 
-        font-size: 10px;
+        border-radius: 12px;
+
+        font-size: 11px;
+
+        line-height: 1.7;
 
         overflow: hidden;
 
         word-break: break-word;
     }
 
-    .terminal-top {
-        gap: 5px;
 
-        padding-bottom: 10px;
-        margin-bottom: 12px;
+    .terminal-top {
+
+        gap: 6px;
+
+        padding-bottom: 12px;
+
+        margin-bottom: 15px;
     }
+
 
     .terminal-top span {
-        width: 8px;
-        height: 8px;
+
+        width: 9px;
+
+        height: 9px;
     }
 
+
     .terminal p {
-        margin: 7px 0;
+
+        margin: 8px 0;
+
+        max-width: 100%;
+
         overflow-wrap: anywhere;
     }
 
 
-    /* =========================
+    /* ====================================
        STATS
-    ========================= */
+    ==================================== */
 
     .stats {
+
         display: grid;
 
         grid-template-columns: 1fr 1fr;
@@ -1816,26 +1911,37 @@ footer a {
         width: 100%;
     }
 
+
     .stats div {
+
         min-width: 0;
+
         padding-left: 12px;
     }
 
+
     .stats strong {
-        font-size: 20px;
+
+        font-size: 21px;
     }
+
 
     .stats span {
-        font-size: 9px;
+
+        font-size: 10px;
+
+        line-height: 1.5;
     }
 
 
-    /* =========================
+    /* ====================================
        SECTION
-    ========================= */
+    ==================================== */
 
     .section {
+
         width: 100%;
+
         max-width: 100%;
 
         padding: 70px 22px;
@@ -1844,194 +1950,332 @@ footer a {
     }
 
 
-    /* =========================
-       SECTION HEAD
-    ========================= */
-
     .section-head {
+
         display: block;
+
+        width: 100%;
+
         margin-bottom: 30px;
     }
 
+
+    /* ====================================
+       FILTER
+    ==================================== */
+
     .filters {
+
         display: flex;
+
         flex-wrap: wrap;
+
         gap: 8px;
+
+        width: 100%;
+
         margin-top: 20px;
     }
 
+
     .filter {
+
+        flex-shrink: 0;
+
+        padding: 7px 14px;
+
         font-size: 11px;
-        padding: 7px 13px;
     }
 
 
-    /* =========================
+    /* ====================================
        ABOUT
-    ========================= */
+    ==================================== */
 
     .about-section {
+
         grid-template-columns: 1fr;
+
         gap: 35px;
     }
 
+
     .about-skills {
+
         grid-template-columns: 1fr 1fr;
+
         gap: 10px;
     }
 
+
     .about-skill {
+
         padding: 15px;
-        min-width: 0;
-    }
-
-    .about-skill h3 {
-        font-size: 14px;
-    }
-
-    .about-skill p {
-        font-size: 10px;
     }
 
 
-    /* =========================
+    /* ====================================
        SKILLS
-    ========================= */
+    ==================================== */
 
     .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
 
-    .skill-card {
-        padding: 22px;
+        grid-template-columns: 1fr;
+
         width: 100%;
     }
 
 
-    /* =========================
+    .skill-card {
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 22px;
+    }
+
+
+    /* ====================================
        PROJECT
-    ========================= */
+    ==================================== */
 
     .project-grid {
+
         display: grid !important;
 
         grid-template-columns: 1fr !important;
 
         width: 100% !important;
+
         max-width: 100% !important;
 
-        gap: 20px !important;
+        gap: 22px !important;
     }
 
+
     .project-card {
+
         width: 100% !important;
+
         max-width: 100% !important;
+
         min-width: 0 !important;
 
         overflow: hidden;
     }
 
-    .project-cover {
-        width: 100% !important;
-        max-width: 100% !important;
 
-        height: 200px;
+    .project-cover {
+
+        width: 100%;
+
+        height: 220px;
 
         object-fit: cover;
     }
 
+
     .project-info {
+
         width: 100%;
+
         padding: 20px;
     }
 
+
     .project-card h3 {
+
         font-size: 20px;
+
+        line-height: 1.4;
+
+        overflow-wrap: anywhere;
     }
 
+
     .project-card p {
-        font-size: 13px;
+
+        font-size: 14px;
+
         line-height: 1.8;
 
         overflow-wrap: anywhere;
     }
 
 
-    /* =========================
+    /* ====================================
        TIMELINE
-    ========================= */
+    ==================================== */
 
     .timeline-item {
+
         grid-template-columns: 1fr;
-        gap: 8px;
+
+        gap: 5px;
     }
 
 
-    /* =========================
+    /* ====================================
        GALLERY
-    ========================= */
+    ==================================== */
 
     .gallery {
+
         grid-template-columns: 1fr;
-        gap: 15px;
+
+        width: 100%;
     }
 
+
     .gallery img {
+
         width: 100%;
+
         height: auto;
     }
 
 
-    /* =========================
+    /* ====================================
        CONTACT
-    ========================= */
+    ==================================== */
 
     .contact-box {
+
         flex-direction: column;
+
         gap: 25px;
+
         padding: 30px 20px;
     }
 
 
-    /* =========================
+    /* ====================================
        MODAL
-    ========================= */
+    ==================================== */
 
     .project-modal {
-        padding: 15px 8px;
+
+        padding: 15px 10px;
     }
+
 
     .modal-cover {
-        height: 220px;
+
+        height: 240px;
     }
+
 
     .case-header {
-        padding: 30px 20px;
+
+        padding: 35px 22px;
     }
+
 
     .case-section {
-        padding: 25px 20px;
+
+        padding: 25px 22px;
     }
+
 
     .overview {
+
         grid-template-columns: 1fr;
-        gap: 25px;
     }
+
 
     .challenge-solution {
+
         grid-template-columns: 1fr;
     }
 
 
-    /* =========================
+    /* ====================================
        FOOTER
-    ========================= */
+    ==================================== */
 
     footer {
+
         flex-direction: column;
+
         gap: 10px;
+
         padding: 30px 22px;
+    }
+
+}
+
+
+/* ========================================
+   VERY SMALL PHONE
+   480px ke bawah
+======================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        height: 68px;
+        padding: 0 14px;
+    }
+
+    .profile-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .brand-text strong {
+        font-size: 14px;
+    }
+
+
+    /* 
+       HP kecil: Hero dibuat 1 kolom
+       supaya terminal tidak sempit
+    */
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 50px 20px 60px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero-text {
+
+        font-size: 15px;
+    }
+
+
+    .hero-terminal {
+
+        width: 100%;
+    }
+
+
+    .terminal {
+
+        max-width: 100%;
+
+        font-size: 12px;
+
+        padding: 18px;
+    }
+
+
+    .project-cover {
+
+        height: 210px;
     }
 
 }
