@@ -2279,3 +2279,45 @@ footer a {
     }
 
 }
+
+@media (max-width: 600px) {
+
+    nav.mobile-open {
+
+        display: flex !important;
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        background: var(--bg-secondary);
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px 20px;
+
+        border-bottom: 1px solid var(--border);
+
+        z-index: 999;
+    }
+
+    nav.mobile-open a {
+
+        display: block;
+
+        padding: 12px 0;
+
+        font-size: 14px;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+}
