@@ -1584,11 +1584,497 @@ footer a {
 }
 
 
+
 /* ========================================
-   MOBILE RESPONSIVE
+   MOBILE - FINAL
 ======================================== */
 
 @media (max-width: 600px) {
+
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        /* Disable zoom */
+        touch-action: pan-y;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        /* Disable horizontal gesture */
+        touch-action: pan-y;
+    }
+
+    /* Semua elemen tidak boleh menyebabkan
+       halaman melebar */
+    *,
+    *::before,
+    *::after {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* ========================================
+       NAVBAR
+    ======================================== */
+
+    .navbar {
+        width: 100%;
+        height: 72px;
+
+        padding: 0 36px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        overflow: hidden;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+
+        gap: 12px;
+
+        min-width: 0;
+        flex: 1;
+    }
+
+    .profile-image {
+        width: 50px;
+        height: 50px;
+
+        flex-shrink: 0;
+    }
+
+    .brand-text {
+        display: flex !important;
+
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .brand-text strong {
+        font-size: 16px;
+
+        white-space: nowrap;
+    }
+
+    .brand-text span {
+        display: block;
+
+        font-size: 13px;
+    }
+
+
+    /* Desktop menu hilang */
+    nav {
+        display: none !important;
+    }
+
+
+    /* Hamburger */
+    .menu-btn {
+        display: block !important;
+
+        width: 45px;
+        height: 45px;
+
+        padding: 0;
+
+        flex-shrink: 0;
+
+        font-size: 34px;
+        line-height: 1;
+
+        color: var(--text);
+
+        background: transparent;
+        border: none;
+    }
+
+
+    /* ========================================
+       HERO
+    ======================================== */
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: auto;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1.05fr)
+            minmax(0, 0.75fr);
+
+        gap: 20px;
+
+        padding:
+            70px
+            36px
+            55px;
+
+        overflow: hidden;
+    }
+
+
+    /* ========================================
+       HERO TEXT
+    ======================================== */
+
+    .eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+        line-height: 1.8;
+
+        margin-bottom: 22px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+
+        line-height: 1.04;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 25px;
+
+        overflow-wrap: normal;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-bottom: 28px;
+    }
+
+
+    /* ========================================
+       BUTTON
+    ======================================== */
+
+    .hero-actions {
+        display: flex;
+
+        gap: 12px;
+
+        margin-bottom: 40px;
+    }
+
+    .btn {
+        padding:
+            13px
+            20px;
+
+        font-size: 14px;
+
+        white-space: normal;
+    }
+
+
+    /* ========================================
+       TERMINAL
+    ======================================== */
+
+    .hero-terminal {
+        width: 100%;
+        min-width: 0;
+
+        display: flex;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        padding-top: 5px;
+    }
+
+    .terminal {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        padding: 20px 14px;
+
+        border-radius: 12px;
+
+        font-size: 10px;
+
+        line-height: 1.7;
+
+        overflow: hidden;
+    }
+
+    .terminal-top {
+        gap: 7px;
+
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+    }
+
+    .terminal-top span {
+        width: 10px;
+        height: 10px;
+    }
+
+    .terminal p {
+        margin: 9px 0;
+
+        white-space: normal;
+
+        overflow-wrap: normal;
+
+        word-break: normal;
+    }
+
+    .terminal b {
+        white-space: normal;
+
+        word-break: normal;
+    }
+
+
+    /* ========================================
+       STATS
+    ======================================== */
+
+    .stats {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+
+        width: 100%;
+    }
+
+    .stats div {
+        min-width: 0;
+
+        padding-left: 16px;
+    }
+
+    .stats strong {
+        font-size: 25px;
+    }
+
+    .stats span {
+        font-size: 12px;
+    }
+
+
+    /* ========================================
+       SECTION
+    ======================================== */
+
+    .section {
+        width: 100%;
+        max-width: 100%;
+
+        padding:
+            80px
+            36px;
+
+        overflow: hidden;
+    }
+
+
+    /* ========================================
+       ABOUT
+    ======================================== */
+
+    .about-section {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-skills {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+
+    /* ========================================
+       SKILLS
+    ======================================== */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .skill-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* ========================================
+       PROJECT
+    ======================================== */
+
+    .section-head {
+        display: block;
+    }
+
+    .filters {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        margin-top: 20px;
+    }
+
+    .project-grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 24px !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .project-card {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        overflow: hidden;
+    }
+
+    .project-cover {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+
+    /* ========================================
+       GALLERY
+    ======================================== */
+
+    .gallery {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+
+        height: auto;
+    }
+
+
+    /* ========================================
+       TIMELINE
+    ======================================== */
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+
+    /* ========================================
+       CONTACT
+    ======================================== */
+
+    .contact-box {
+        flex-direction: column;
+
+        gap: 30px;
+
+        padding: 30px 25px;
+    }
+
+
+    /* ========================================
+       MODAL
+    ======================================== */
+
+    .project-modal {
+        padding: 15px 10px;
+
+        overflow-x: hidden;
+    }
+
+    .modal-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .modal-cover {
+        height: 230px;
+    }
+
+    .case-header {
+        padding: 35px 25px;
+    }
+
+    .case-section {
+        padding: 25px;
+    }
+
+    .overview {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-solution {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 30px 36px;
+    }
+
+}@media (max-width: 600px) {
 
     html {
         width: 100%;
